@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/menu_event_agenda"
+            android:showAsAction="ifRoom|withText"
+            android:icon="@android:drawable/ic_menu_my_calendar"
+            android:title="guardar"/>
+    <item
+            android:id="@+id/menu_event_share"
+            android:showAsAction="ifRoom|withText"
+            android:icon="@android:drawable/ic_menu_share"
+            android:title="share"/>
+</menu>

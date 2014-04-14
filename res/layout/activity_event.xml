@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:id="@+id/linearLayoutEvent"
+        >
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+    <LinearLayout
+                android:id="@+id/linearLayoutContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical" >
+    <LinearLayout
+            android:id="@+id/linearLayoutEventHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="250dip"
+            android:gravity="center"
+            android:orientation="vertical" >
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=""
+                android:layout_marginTop="150dip"
+                android:paddingTop="10dip"
+                android:paddingRight="10dip"
+                android:paddingLeft="10dip"
+                android:background="@color/black_overlay"
+                android:textColor="#FFFFFF"
+                android:id="@+id/evenDate"
+                android:layout_gravity="center"/>
+
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="71dip"
+                android:paddingBottom="10dip"
+                android:paddingRight="10dip"
+                android:paddingLeft="10dip"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:id="@+id/evenTitle"
+                android:background="@color/black_overlay"
+                android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/linearLayoutEventAddress"
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:background="#808080"
+            android:padding="10dip"
+            android:orientation="vertical" >
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:id="@+id/eventPlace"
+                android:layout_gravity="center"/>
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""
+                android:paddingBottom="10dip"
+                android:textColor="#FFFFFF"
+                android:id="@+id/eventAdress"
+                android:layout_gravity="center"/>
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/map"
+                  android:layout_width="match_parent"
+                  android:layout_height="245dp"
+                  android:name="com.google.android.gms.maps.MapFragment"/>
+        <com.google.ads.doubleclick.DfpAdView
+                  android:id="@+id/adView"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:paddingTop="10dip"
+                  ads:adUnitId="/107326991/Apuntate-evento"
+                  ads:adSize="320x50"
+                  ads:loadAdOnCreate="true"/>
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""
+                android:paddingTop="10dip"
+                android:paddingBottom="10dip"
+                android:textColor="#FFFFFF"
+                android:id="@+id/eventDescription"
+                android:layout_gravity="center"/>
+    </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
